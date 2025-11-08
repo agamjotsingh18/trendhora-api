@@ -127,26 +127,45 @@
   color: white;
 }
 
+/* Navigation Buttons (fixed styling) */
 .nav-button {
   position: absolute;
-  top: 40%;
-  transform: translateY(-5%);
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
-  backdrop-filter: blur(10px);
-  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  backdrop-filter: blur(6px);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .nav-button:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .nav-button-left {
-  left: 1rem;
+  left: 0.8rem;
 }
 
 .nav-button-right {
-  right: -1rem;
+  right: 0.8rem;
+}
+
+/* Optional: Show arrows even on mobile */
+@media (max-width: 768px) {
+  .nav-button-left,
+  .nav-button-right {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
 }
 
 .thumbnail-container {
